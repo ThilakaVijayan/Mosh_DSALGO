@@ -32,19 +32,19 @@ public class Array {
     public void removeAt(int index) {
         if (null == this.array || index >= this.currentIndex)
             return;
-        int[] arrayNew = new int[this.arrayLength-1];
-        for(int i=0; i<index;i++){
+        int[] arrayNew = new int[this.arrayLength - 1];
+        for (int i = 0; i < index; i++) {
             arrayNew[i] = this.array[i];
         }
-        for(int i=index+1;i<this.arrayLength;i++){
-            arrayNew[i-1] = this.array[i];
+        for (int i = index + 1; i < this.arrayLength; i++) {
+            arrayNew[i - 1] = this.array[i];
         }
         this.array = arrayNew;
         this.arrayLength--;
     }
 
     public int indexOf(int num) {
-        if(null == array || num >= this.currentIndex)
+        if (null == array || num >= this.currentIndex)
             return -1;
         return this.array[num];
     }
